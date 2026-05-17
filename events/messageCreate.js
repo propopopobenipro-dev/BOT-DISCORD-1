@@ -27,7 +27,7 @@ module.exports = {
         fs.readFileSync(filePath, "utf8")
       );
 
-      const template = templates["imperiumgeo"];
+     const template = templates["ImperiumHub"];
 
       for (const categoryName in template) {
 
