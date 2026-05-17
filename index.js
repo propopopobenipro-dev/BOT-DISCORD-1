@@ -1,5 +1,15 @@
 require('dotenv').config();
 
+const welcomeSystem =
+require("./systems/welcomeSystem");
+
+const goodbyeSystem =
+require("./systems/goodbyeSystem");
+
+client.on("guildMemberAdd", welcomeSystem);
+
+client.on("guildMemberRemove", goodbyeSystem);
+
 const fs = require('fs');
 const path = require('path');
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
