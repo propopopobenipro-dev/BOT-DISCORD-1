@@ -1,31 +1,40 @@
 {
-  "imperiumgeo": {
-    "📌 INFORMACIÓN": [
-      "📜│reglas",
-      "📢│anuncios",
-      "🧭│mecanicas",
-      "🏳️│naciones"
-    ],
-    "🌍 GEOPOLÍTICA": [
-      "🗺️│mapa-global",
-      "⚔️│guerras",
-      "📜│tratados",
-      "🏴│registro-nacional"
-    ],
-    "💬 COMUNIDAD": [
-      "💬│general",
-      "😂│memes-imperiales",
-      "📸│screenshots",
-      "🎮│gaming"
-    ],
-    "🤖 SISTEMA": [
-      "🤖│bots",
-      "🔒│logs"
-    ],
-    "👑 STAFF": [
-      "🚨│reportes",
-      "🧠│staff-chat",
-      "🗂️│moderación"
-    ]
-  }
+"ImperiumHub": {
+"📌│INFORMACIÓN": [
+"📜│reglas",
+"📢│anuncios",
+"📚│información",
+"🎭│roles",
+],
+
+"💼 SERVICIOS": [
+  "💰│trabajos",
+  "🛒│servicios",
+  "🤖│bots-discord",
+  "🖼️│logos-banners",
+  "⚙️│configuración",
+  "📽️│edicion-videos"
+],
+
+"💬 COMUNIDAD": [
+  "💬│general",
+  "😂│memes",
+  "📸│screenshots",
+  "🎮│gaming",
+  "🎙️│charlas"
+],
+
+"🤖 SISTEMA": [
+  "🤖│bots",
+  "🎫│tickets",
+  "📈│niveles",
+],
+
+"👑 STAFF": [
+  "🚨│reportes",
+  "🧠│staff-chat",
+  "🗂️│moderación",
+  "🔒│logs"
+  ] 
+ }
 }
