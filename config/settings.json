@@ -1,9 +1,19 @@
 {
   "prefix": "!",
-  "adminRoleIds": [
-    "1505139055212630228",
-    "1505511279559966850"
-  ],
-  "logChannelName": "🔒│log",
-  "memberRoleId": "1505258367311020172"
+
+  "servers": {
+
+    "1504857903079882814": {
+      "memberRoleId": "1505258367311020172",
+      "welcomeChannel": "🛬│bienvenida",
+      "goodbyeChannel": "🛫│despedidas"
+    },
+
+    "1505494433397866507": {
+      "memberRoleId": "1505642692527521964",
+      "welcomeChannel": "👋・welcome",
+      "goodbyeChannel": "💀・goodbye"
+    }
+
+  }
 }
