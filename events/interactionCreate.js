@@ -5,7 +5,9 @@ const {
 } = require('discord.js');
 
 function isAdmin(member) {
-  return member.roles.cache.has(config.adminRoleId);
+  return config.adminRoleIds.some(id =>
+    member.roles.cache.has(id)
+  );
 }
 
 module.exports = {
