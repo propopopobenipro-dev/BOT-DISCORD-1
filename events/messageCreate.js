@@ -71,7 +71,7 @@ module.exports = {
         fs.readFileSync(filePath, "utf8")
       );
 
-      const roles = templates["imperiumgeo"];
+      const roles = templates["nexusworks"];
 
       for (const role of roles) {
 
