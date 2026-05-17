@@ -1,87 +1,82 @@
 {
-"nexusworks": [
-{
-"name": "👑 Owner",
-"color": "#FFD700",
-"permissions": ["Administrator"],
-"hoist": true
-},
-{
-"name": "🛡️ Admin",
-"color": "#FF4500",
-"permissions": ["ManageGuild", "ManageChannels", "ManageRoles"],
-"hoist": true
-},
-{
-"name": "⚔️ Moderador",
-"color": "#FF0000",
-"permissions": ["BanMembers", "KickMembers", "ManageMessages"],
-"hoist": true
-},
-{
-"name": "🧠 Manager",
-"color": "#9932CC",
-"permissions": ["ManageMessages", "ModerateMembers"],
-"hoist": true
-},
-
-```
-{
-  "name": "🤖 Developer",
-  "color": "#00BFFF",
-  "permissions": [],
-  "hoist": true
-},
-{
-  "name": "💻 Programador",
-  "color": "#7B68EE",
-  "permissions": [],
-  "hoist": true
-},
-{
-  "name": "⚙️ Configurador",
-  "color": "#4682B4",
-  "permissions": [],
-  "hoist": true
-},
-{
-  "name": "🏗️ Builder",
-  "color": "#32CD32",
-  "permissions": [],
-  "hoist": true
-},
-{
-  "name": "🎨 Diseñador",
-  "color": "#FF69B4",
-  "permissions": [],
-  "hoist": true
-},
-{
-  "name": "🎬 Editor",
-  "color": "#DC143C",
-  "permissions": [],
-  "hoist": true
-},
-
-{
-  "name": "⭐ Cliente",
-  "color": "#F0E68C",
-  "permissions": ["SendMessages", "ViewChannel"],
-  "hoist": true
-},
-{
-  "name": "👥 Miembro",
-  "color": "#A9A9A9",
-  "permissions": ["SendMessages", "ViewChannel"],
-  "hoist": true
-},
-{
-  "name": "🚀 Booster",
-  "color": "#FF73FA",
-  "permissions": ["SendMessages", "ViewChannel"],
-  "hoist": true
-}
-```
-
-]
+  "nexusworks": [
+    {
+      "name": "👑 Owner",
+      "color": "#FFD700",
+      "permissions": ["Administrator"],
+      "hoist": true
+    },
+    {
+      "name": "🛡️ Admin",
+      "color": "#FF4500",
+      "permissions": ["ManageGuild", "ManageChannels", "ManageRoles"],
+      "hoist": true
+    },
+    {
+      "name": "⚔️ Moderador",
+      "color": "#FF0000",
+      "permissions": ["BanMembers", "KickMembers", "ManageMessages"],
+      "hoist": true
+    },
+    {
+      "name": "🧠 Manager",
+      "color": "#9932CC",
+      "permissions": ["ManageMessages", "ModerateMembers"],
+      "hoist": true
+    },
+    {
+      "name": "🤖 Developer",
+      "color": "#00BFFF",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "💻 Programador",
+      "color": "#7B68EE",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "⚙️ Configurador",
+      "color": "#4682B4",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "🏗️ Builder",
+      "color": "#32CD32",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "🎨 Diseñador",
+      "color": "#FF69B4",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "🎬 Editor",
+      "color": "#DC143C",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "⭐ Cliente",
+      "color": "#F0E68C",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": true
+    },
+    {
+      "name": "👥 Miembro",
+      "color": "#A9A9A9",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": true
+    },
+    {
+      "name": "🚀 Booster",
+      "color": "#FF73FA",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": true
+    }
+  ]
 }
