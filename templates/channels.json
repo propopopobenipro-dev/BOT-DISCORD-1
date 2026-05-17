@@ -1,40 +1,41 @@
 {
-"ImperiumHub": {
-"📌│INFORMACIÓN": [
-"📜│reglas",
-"📢│anuncios",
-"📚│información",
-"🎭│roles",
-],
+  "ImperiumHub": {
 
-"💼 SERVICIOS": [
-  "💰│trabajos",
-  "🛒│servicios",
-  "🤖│bots-discord",
-  "🖼️│logos-banners",
-  "⚙️│configuración",
-  "📽️│edicion-videos"
-],
+    "📌│INFORMACIÓN": [
+      "📜│reglas",
+      "📢│anuncios",
+      "📚│información",
+      "🎭│roles"
+    ],
 
-"💬 COMUNIDAD": [
-  "💬│general",
-  "😂│memes",
-  "📸│screenshots",
-  "🎮│gaming",
-  "🎙️│charlas"
-],
+    "💼 SERVICIOS": [
+      "💰│trabajos",
+      "🛒│servicios",
+      "🤖│bots-discord",
+      "🖼️│logos-banners",
+      "⚙️│configuración",
+      "📽️│edicion-videos"
+    ],
 
-"🤖 SISTEMA": [
-  "🤖│bots",
-  "🎫│tickets",
-  "📈│niveles",
-],
+    "💬 COMUNIDAD": [
+      "💬│general",
+      "😂│memes",
+      "📸│screenshots",
+      "🎮│gaming",
+      "🎙️│charlas"
+    ],
 
-"👑 STAFF": [
-  "🚨│reportes",
-  "🧠│staff-chat",
-  "🗂️│moderación",
-  "🔒│logs"
-  ] 
- }
+    "🤖 SISTEMA": [
+      "🤖│bots",
+      "🎫│tickets",
+      "📈│niveles"
+    ],
+
+    "👑 STAFF": [
+      "🚨│reportes",
+      "🧠│staff-chat",
+      "🗂️│moderación",
+      "🔒│log"
+    ]
+  }
 }
