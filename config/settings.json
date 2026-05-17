@@ -1,6 +1,9 @@
 {
   "prefix": "!",
-  "adminRoleId": "1505139055212630228",
+  "adminRoleIds": [
+    "1505139055212630228",
+    "1505511279559966850"
+  ],
   "logChannelName": "🔒│log",
   "memberRoleId": "1505258367311020172"
 }
