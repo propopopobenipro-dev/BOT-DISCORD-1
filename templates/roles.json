@@ -1,0 +1,139 @@
+{
+  "imperiumgeo": [
+    {
+      "name": "👑 Owner",
+      "color": "#FFD700",
+      "permissions": ["Administrator"],
+      "hoist": true
+    },
+    {
+      "name": "⚔️ Moderador",
+      "color": "#FF0000",
+      "permissions": ["BanMembers", "KickMembers", "ManageMessages"],
+      "hoist": true
+    },
+    {
+      "name": "🛡️ Help",
+      "color": "#0099FF",
+      "permissions": ["KickMembers", "ManageMessages", "ModerateMembers"],
+      "hoist": true
+    },
+
+    {
+      "name": "👑 Emperador de Roma",
+      "color": "#FFD700",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "🏛️ Ciudadano de Roma",
+      "color": "#C0C0C0",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": false
+    },
+
+    {
+      "name": "👑 Rey de Cartago",
+      "color": "#B22222",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "🌊 Ciudadano de Cartago",
+      "color": "#8B0000",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": false
+    },
+
+    {
+      "name": "👑 Faraón de Egipto",
+      "color": "#DAA520",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "🏺 Ciudadano de Egipto",
+      "color": "#B8860B",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": false
+    },
+
+    {
+      "name": "👑 Rey de Macedonia",
+      "color": "#4169E1",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "🛡️ Ciudadano de Macedonia",
+      "color": "#1E90FF",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": false
+    },
+
+    {
+      "name": "👑 Rey de Persia",
+      "color": "#8A2BE2",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "🏹 Ciudadano de Persia",
+      "color": "#9370DB",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": false
+    },
+
+    {
+      "name": "👑 Rey de Grecia",
+      "color": "#00CED1",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "🏺 Ciudadano de Grecia",
+      "color": "#20B2AA",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": false
+    },
+
+    {
+      "name": "👑 Rey de Hispania",
+      "color": "#FF8C00",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "🌾 Ciudadano de Hispania",
+      "color": "#FFA500",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": false
+    },
+
+    {
+      "name": "👑 Rey de Galia",
+      "color": "#2E8B57",
+      "permissions": [],
+      "hoist": true
+    },
+    {
+      "name": "🌲 Ciudadano de Galia",
+      "color": "#3CB371",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": false
+    },
+
+    {
+      "name": "💰 Mercader Mediterráneo",
+      "color": "#FFDAB9",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": false
+    },
+    {
+      "name": "📜 Historiador",
+      "color": "#F5DEB3",
+      "permissions": ["SendMessages", "ViewChannel"],
+      "hoist": false
+    }
+  ]
+}

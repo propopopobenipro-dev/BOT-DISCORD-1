@@ -1,0 +1,12 @@
+{
+  "bannedLinks": [
+    "discord.gg/",
+    "http://",
+    "https://"
+  ],
+
+  "maxCapsLength": 10,
+  "capsEnabled": true,
+
+  "spamCooldownMs": 3000
+}

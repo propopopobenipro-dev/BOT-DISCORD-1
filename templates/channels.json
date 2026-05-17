@@ -1,0 +1,31 @@
+{
+  "imperiumgeo": {
+    "📌 INFORMACIÓN": [
+      "📜│reglas",
+      "📢│anuncios",
+      "🧭│mecanicas",
+      "🏳️│naciones"
+    ],
+    "🌍 GEOPOLÍTICA": [
+      "🗺️│mapa-global",
+      "⚔️│guerras",
+      "📜│tratados",
+      "🏴│registro-nacional"
+    ],
+    "💬 COMUNIDAD": [
+      "💬│general",
+      "😂│memes-imperiales",
+      "📸│screenshots",
+      "🎮│gaming"
+    ],
+    "🤖 SISTEMA": [
+      "🤖│bots",
+      "🔒│logs"
+    ],
+    "👑 STAFF": [
+      "🚨│reportes",
+      "🧠│staff-chat",
+      "🗂️│moderación"
+    ]
+  }
+}
