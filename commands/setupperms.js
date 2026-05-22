@@ -38,14 +38,29 @@ module.exports = {
         // 🔥 recorrer canales
         for (const channelName of channels) {
 
-          // buscar canal
-          const channel = guild.channels.cache.find(
-            c => c.name === channelName
-          );
+          // 🧼 limpiar nombres
+          const cleanName = channelName
+            .toLowerCase()
+            .replace(/[^\w\s]/gi, "")
+            .replace(/\s+/g, "");
 
-          // ⚠️ no existe
+          // 🔎 buscar canal parecido
+          const channel = guild.channels.cache.find(c => {
+
+            const discordName = c.name
+              .toLowerCase()
+              .replace(/[^\w\s]/gi, "")
+              .replace(/\s+/g, "");
+
+            return discordName.includes(cleanName);
+
+          });
+
+          // ⚠️ no encontrado
           if (!channel) {
-            console.log(`⚠️ No existe: ${channelName}`);
+
+            console.log(`⚠️ No encontré: ${channelName}`);
+
             continue;
           }
 
