@@ -1,6 +1,5 @@
 const {
-  PermissionFlagsBits,
-  ChannelType
+  PermissionFlagsBits
 } = require("discord.js");
 
 module.exports = {
@@ -14,91 +13,81 @@ module.exports = {
 
     const guild = message.guild;
 
-    // =========================
-    // 🎭 ROLES
-    // =========================
+    // 🔥 mensaje inicio
+    const msg = await message.reply(
+      "⚙️ Configurando permisos automáticamente..."
+    );
 
-    let staffRole = guild.roles.cache.find(r => r.name === "STAFF");
+    try {
 
-    if (!staffRole) {
-      staffRole = await guild.roles.create({
-        name: "STAFF",
-        color: "Red",
-        permissions: [
-          PermissionFlagsBits.ManageMessages,
-          PermissionFlagsBits.KickMembers,
-          PermissionFlagsBits.BanMembers,
-          PermissionFlagsBits.ManageChannels
-        ]
-      });
+      // =========================
+      // 🔒 CONFIGURAR CANALES
+      // =========================
+
+      for (const channel of guild.channels.cache.values()) {
+
+        // 👑 STAFF PRIVADO
+        if (
+          channel.name.includes("staff") ||
+          channel.name.includes("log") ||
+          channel.name.includes("moderación") ||
+          channel.name.includes("reportes")
+        ) {
+
+          await channel.permissionOverwrites.edit(
+            guild.roles.everyone,
+            {
+              ViewChannel: false
+            }
+          );
+
+          console.log(`🔒 Privado: ${channel.name}`);
+        }
+
+        // 📢 SOLO LECTURA
+        if (
+          channel.name.includes("reglas") ||
+          channel.name.includes("anuncios") ||
+          channel.name.includes("información")
+        ) {
+
+          await channel.permissionOverwrites.edit(
+            guild.roles.everyone,
+            {
+              SendMessages: false
+            }
+          );
+
+          console.log(`📢 Solo lectura: ${channel.name}`);
+        }
+
+        // 🎫 TICKETS
+        if (channel.name.includes("tickets")) {
+
+          await channel.permissionOverwrites.edit(
+            guild.roles.everyone,
+            {
+              ViewChannel: true
+            }
+          );
+
+          console.log(`🎫 Tickets configurado`);
+        }
+      }
+
+      // ✅ terminó
+      await msg.edit(
+        "🔥 Permisos configurados correctamente."
+      );
+
+    } catch (err) {
+
+      console.error(err);
+
+      // ❌ error
+      await msg.edit(
+        "❌ No pude configurar algunos permisos. Revisá consola."
+      );
     }
-
-    // =========================
-    // 🔒 CONFIGURAR CANALES
-    // =========================
-
-    guild.channels.cache.forEach(async channel => {
-
-      // STAFF
-      if (
-        channel.name.includes("staff") ||
-        channel.name.includes("log") ||
-        channel.name.includes("moderación") ||
-        channel.name.includes("reportes")
-      ) {
-
-        await channel.permissionOverwrites.edit(
-          guild.roles.everyone,
-          {
-            ViewChannel: false
-          }
-        );
-
-        await channel.permissionOverwrites.edit(
-          staffRole,
-          {
-            ViewChannel: true,
-            SendMessages: true
-          }
-        );
-      }
-
-      // TICKETS
-      if (channel.name.includes("tickets")) {
-
-        await channel.permissionOverwrites.edit(
-          guild.roles.everyone,
-          {
-            ViewChannel: true,
-            SendMessages: false
-          }
-        );
-
-        await channel.permissionOverwrites.edit(
-          staffRole,
-          {
-            ViewChannel: true,
-            SendMessages: true
-          }
-        );
-      }
-
-      // REGLAS / ANUNCIOS
-      if (
-        channel.name.includes("reglas") ||
-        channel.name.includes("anuncios")
-      ) {
-
-        await channel.permissionOverwrites.edit(
-          guild.roles.everyone,
-          {
-            SendMessages: false
-          }
-        );
-      }
-
-    });
-
-    message.reply("🔥 Permisos configurados automáticamente.");
   }
 };
