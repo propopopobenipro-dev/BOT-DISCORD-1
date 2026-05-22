@@ -1,19 +1,11 @@
 require('dotenv').config();
 
-const welcomeSystem =
-require("./systems/welcomeSystem");
-
-const goodbyeSystem =
-require("./systems/goodbyeSystem");
-
-client.on("guildMemberAdd", welcomeSystem);
-
-client.on("guildMemberRemove", goodbyeSystem);
-
 const fs = require('fs');
-const path = require('path');
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
 
+// =========================
+// 🤖 CREAR CLIENTE
+// =========================
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -23,8 +15,25 @@ const client = new Client({
   ]
 });
 
-// 📦 colección de comandos (por si luego agregas prefix commands)
+// 📦 colección de comandos
 client.commands = new Collection();
+
+// =========================
+// 📂 IMPORTAR SISTEMAS
+// =========================
+const welcomeSystem = require("./systems/welcomeSystem");
+const goodbyeSystem = require("./systems/goodbyeSystem");
+
+// =========================
+// 👋 EVENTOS DE ENTRADA/SALIDA
+// =========================
+client.on("guildMemberAdd", (member) => {
+  welcomeSystem(member);
+});
+
+client.on("guildMemberRemove", (member) => {
+  goodbyeSystem(member);
+});
 
 // =========================
 // 📡 CARGAR EVENTOS
@@ -46,16 +55,6 @@ for (const file of eventFiles) {
 // =========================
 require('./systems/logSystem')(client);
 require('./systems/automodSystem')(client);
-
-// 👋 bienvenida
-if (fs.existsSync('./systems/welcomeSystem.js')) {
-  require('./systems/welcomeSystem');
-}
-
-// 👋 despedida
-if (fs.existsSync('./systems/goodbyeSystem.js')) {
-  require('./systems/goodbyeSystem');
-}
 
 // =========================
 // 🔥 BOT READY
