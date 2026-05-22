@@ -3,7 +3,7 @@ const {
 } = require("discord.js");
 
 // 📂 cargar template
-const channelsData = require("../template/channels.json");
+const channelsData = require("../templates/channels.json");
 
 module.exports = {
   name: "setupperms",
