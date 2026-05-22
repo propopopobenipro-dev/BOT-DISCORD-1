@@ -5,28 +5,27 @@ const {
 module.exports = {
   name: "setupperms",
 
-  async execute(message) {
+  async execute(message, args) {
 
+    // 🔒 admin only
     if (!message.member.permissions.has(PermissionFlagsBits.Administrator)) {
       return message.reply("❌ Necesitas admin.");
     }
 
     const guild = message.guild;
 
-    // 🔥 mensaje inicio
-    const msg = await message.reply(
-      "⚙️ Configurando permisos automáticamente..."
+    // ⚙️ mensaje inicio
+    const statusMsg = await message.reply(
+      "⚙️ Configurando permisos..."
     );
 
     try {
 
-      // =========================
-      // 🔒 CONFIGURAR CANALES
-      // =========================
-
       for (const channel of guild.channels.cache.values()) {
 
-        // 👑 STAFF PRIVADO
+        // =========================
+        // 🔒 STAFF PRIVADO
+        // =========================
         if (
           channel.name.includes("staff") ||
           channel.name.includes("log") ||
@@ -40,11 +39,11 @@ module.exports = {
               ViewChannel: false
             }
           );
-
-          console.log(`🔒 Privado: ${channel.name}`);
         }
 
+        // =========================
         // 📢 SOLO LECTURA
+        // =========================
         if (
           channel.name.includes("reglas") ||
           channel.name.includes("anuncios") ||
@@ -57,11 +56,11 @@ module.exports = {
               SendMessages: false
             }
           );
-
-          console.log(`📢 Solo lectura: ${channel.name}`);
         }
 
+        // =========================
         // 🎫 TICKETS
+        // =========================
         if (channel.name.includes("tickets")) {
 
           await channel.permissionOverwrites.edit(
@@ -70,13 +69,12 @@ module.exports = {
               ViewChannel: true
             }
           );
-
-          console.log(`🎫 Tickets configurado`);
         }
+
       }
 
-      // ✅ terminó
-      await msg.edit(
+      // ✅ terminado
+      await statusMsg.edit(
         "🔥 Permisos configurados correctamente."
       );
 
@@ -85,8 +83,8 @@ module.exports = {
       console.error(err);
 
       // ❌ error
-      await msg.edit(
-        "❌ No pude configurar algunos permisos. Revisá consola."
+      await statusMsg.edit(
+        "❌ Error configurando permisos."
       );
     }
   }
