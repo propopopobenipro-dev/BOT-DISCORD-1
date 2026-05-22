@@ -2,6 +2,9 @@ const {
   PermissionFlagsBits
 } = require("discord.js");
 
+// 📂 cargar template
+const channelsData = require("../template/channels.json");
+
 module.exports = {
   name: "setupperms",
 
@@ -16,59 +19,89 @@ module.exports = {
 
     // ⚙️ mensaje inicio
     const statusMsg = await message.reply(
-      "⚙️ Configurando permisos..."
+      "⚙️ Configurando permisos automáticamente..."
     );
 
     try {
 
-      for (const channel of guild.channels.cache.values()) {
+      const template = channelsData["ImperiumHub"];
 
-        // =========================
-        // 🔒 STAFF PRIVADO
-        // =========================
-        if (
-          channel.name.includes("staff") ||
-          channel.name.includes("log") ||
-          channel.name.includes("moderación") ||
-          channel.name.includes("reportes")
-        ) {
+      if (!template) {
+        return statusMsg.edit(
+          "❌ No encontré la plantilla ImperiumHub."
+        );
+      }
 
-          await channel.permissionOverwrites.edit(
-            guild.roles.everyone,
-            {
-              ViewChannel: false
-            }
+      // 🔥 recorrer categorías
+      for (const [categoryName, channels] of Object.entries(template)) {
+
+        // 🔥 recorrer canales
+        for (const channelName of channels) {
+
+          // buscar canal
+          const channel = guild.channels.cache.find(
+            c => c.name === channelName
           );
-        }
 
-        // =========================
-        // 📢 SOLO LECTURA
-        // =========================
-        if (
-          channel.name.includes("reglas") ||
-          channel.name.includes("anuncios") ||
-          channel.name.includes("información")
-        ) {
+          // ⚠️ no existe
+          if (!channel) {
+            console.log(`⚠️ No existe: ${channelName}`);
+            continue;
+          }
 
-          await channel.permissionOverwrites.edit(
-            guild.roles.everyone,
-            {
-              SendMessages: false
-            }
-          );
-        }
+          // =========================
+          // 🔒 STAFF PRIVADO
+          // =========================
+          if (
+            categoryName.includes("STAFF")
+          ) {
 
-        // =========================
-        // 🎫 TICKETS
-        // =========================
-        if (channel.name.includes("tickets")) {
+            await channel.permissionOverwrites.edit(
+              guild.roles.everyone,
+              {
+                ViewChannel: false
+              }
+            );
 
-          await channel.permissionOverwrites.edit(
-            guild.roles.everyone,
-            {
-              ViewChannel: true
-            }
-          );
+            console.log(`🔒 Privado: ${channel.name}`);
+          }
+
+          // =========================
+          // 📢 SOLO LECTURA
+          // =========================
+          if (
+            channel.name.includes("reglas") ||
+            channel.name.includes("anuncios") ||
+            channel.name.includes("información")
+          ) {
+
+            await channel.permissionOverwrites.edit(
+              guild.roles.everyone,
+              {
+                SendMessages: false
+              }
+            );
+
+            console.log(`📢 Solo lectura: ${channel.name}`);
+          }
+
+          // =========================
+          // 🎫 TICKETS
+          // =========================
+          if (
+            channel.name.includes("tickets")
+          ) {
+
+            await channel.permissionOverwrites.edit(
+              guild.roles.everyone,
+              {
+                ViewChannel: true
+              }
+            );
+
+            console.log(`🎫 Tickets configurado`);
+          }
+
         }
 
       }
