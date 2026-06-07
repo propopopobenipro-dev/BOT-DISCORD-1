@@ -21,7 +21,7 @@ module.exports = async (member) => {
   if (!channel) return;
 
   const embed = new EmbedBuilder()
-    .setTitle("💀 Un jugador salió")
+    .setTitle("💀 Un miembro se- salió")
     .setDescription(
       `${member.user.tag} abandonó el servidor`
     )
