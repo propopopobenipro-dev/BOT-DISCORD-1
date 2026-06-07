@@ -19,64 +19,35 @@
       "hoist": true
     },
     {
-      "name": "🧠 Manager",
-      "color": "#9932CC",
-      "permissions": ["ManageMessages", "ModerateMembers"],
-      "hoist": true
-    },
-    {
-      "name": "🤖 Developer",
-      "color": "#00BFFF",
+      "name": "🔴 Streamer",
+      "color": "#00FF7F",
       "permissions": [],
       "hoist": true
     },
     {
-      "name": "💻 Programador",
-      "color": "#7B68EE",
+      "name": "🤝 Colaborador",
+      "color": "#FFA500",
       "permissions": [],
       "hoist": true
     },
     {
-      "name": "⚙️ Configurador",
-      "color": "#4682B4",
-      "permissions": [],
-      "hoist": true
-    },
-    {
-      "name": "🏗️ Builder",
-      "color": "#32CD32",
-      "permissions": [],
-      "hoist": true
-    },
-    {
-      "name": "🎨 Diseñador",
-      "color": "#FF69B4",
-      "permissions": [],
-      "hoist": true
-    },
-    {
-      "name": "🎬 Editor",
-      "color": "#DC143C",
-      "permissions": [],
-      "hoist": true
-    },
-    {
-      "name": "⭐ Cliente",
+      "name": "⭐ VIP",
       "color": "#F0E68C",
       "permissions": ["SendMessages", "ViewChannel"],
       "hoist": true
     },
     {
-      "name": "👥 Miembro",
-      "color": "#A9A9A9",
+      "name": "🎯 OG",
+      "color": "#ADFF2F",
       "permissions": ["SendMessages", "ViewChannel"],
       "hoist": true
     },
     {
-      "name": "🚀 Booster",
-      "color": "#FF73FA",
+      "name": "💚 Suscriptor Kick",
+      "color": "#00FF00",
       "permissions": ["SendMessages", "ViewChannel"],
       "hoist": true
+    
     }
   ]
 }
